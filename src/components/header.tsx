@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default async function Header () {
-    const user = true
+    const user = false
 
     return (
         <header className="shadow-sm fixed w-full z-50 bg-white top-0">
