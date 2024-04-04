@@ -81,6 +81,21 @@ a {
   z-index: -1;
 }
 
+.subtitle {
+  font-family: var(--type-second);
+  line-height: 1;
+  font-size: 2rem;
+}
+
+.subtitle::after {
+  content: '';
+  display: block;
+  background: #ddd;
+  height: 0.5rem;
+  width: 3rem;
+  border-radius: 0.2rem;
+}
+
 .animeLeft {
   opacity: 0;
   transform: translateX(-20px);
