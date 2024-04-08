@@ -18,7 +18,7 @@ export default async function passwordLost(state:{}, formData: FormData) {
         })
 
         if(!response.ok) {
-            throw new Error('Emai ou usuário não cadastrado.')
+            throw new Error('Email ou usuário não cadastrado.')
         }
         return {data: null, ok: true, error: ''}
 
