@@ -2,9 +2,6 @@
 
 import { USER_GET, USER_POST } from "@/functions/api";
 import apiError from "@/functions/api-error";
-import { ok } from "assert";
-import { error } from "console";
-import login from "./logint";
 import { cookies } from "next/headers";
 
 export type User = {
