@@ -3,6 +3,7 @@
 import photosGet, { Photo } from "@/actions/photos-get";
 import FeedPhotos from "./feed-photos";
 import React from "react";
+import Loading from "@/components/helper/loading";
 
 export default function Feed({ photos, user }: { photos: Photo[], user?: 0 | string }) {
   const [photosFeed, setPhotosFeed] = React.useState<Photo[]>(photos)
@@ -58,7 +59,9 @@ export default function Feed({ photos, user }: { photos: Photo[], user?: 0 | str
   return (
     <div>
       <FeedPhotos photos={photosFeed} />
-      {loading && <p>Carregando...</p>}
+      <div className="flex h-24 my-4 mx-auto">
+        {infinite ? loading && <Loading /> : <p className="text-center text-[#888] mx-auto">Não há mais postagens</p>}
+      </div>
     </div>
   );
 }
