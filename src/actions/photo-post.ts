@@ -2,8 +2,6 @@
 
 import { PHOTO_POST } from "@/functions/api";
 import apiError from "@/functions/api-error";
-import { ok } from "assert";
-import { error } from "console";
 import { revalidateTag } from "next/cache";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
