@@ -13,8 +13,10 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({
   children,
+  modal
 }: Readonly<{
   children: React.ReactNode;
+  modal: React.ReactNode;
 }>) {
   const {data: user} = await userGet();
   
@@ -24,9 +26,10 @@ export default async function RootLayout({
         <UserContextProvider user={user}>
           <div className="App">
             <Header />
-            <div className="AppBody">
+            <main className="AppBody">
               {children}
-            </div>
+            </main>
+            <div>{modal}</div>
             <Footer />
           </div>
         </UserContextProvider>
